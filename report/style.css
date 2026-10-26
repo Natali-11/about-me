@@ -1,0 +1,102 @@
+/* Размер бумаги при печати */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: lightgray;
+}
+
+/* Один лист A4 */
+.sheet {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  padding: 20mm 15mm 20mm 30mm;
+  box-sizing: border-box;
+  background: white;
+  font-family: 'Times New Roman', serif;
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+/* Титульный лист */
+.title-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 3mm;
+}
+
+.gap {
+  margin-top: 10mm;
+}
+
+.emblem {
+  display: block;
+  width: 40mm;
+  margin: 5mm auto 0;
+}
+
+.banner {
+  display: block;
+  width: 70mm;
+  margin: -21mm auto 5mm;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 8mm;
+  margin-top: 10mm;
+  text-align: left;
+}
+
+.info img {
+  width: 40mm;
+}
+
+.info td {
+  padding-right: 5mm;
+}
+
+.city {
+  margin-top: auto;
+}
+
+/* Текст отчёта */
+h2 {
+  font-size: 14pt;
+}
+
+.indent {
+  text-indent: 12.5mm;
+  text-align: justify;
+}
+
+li {
+  margin-bottom: 4mm;
+  text-align: justify;
+}
+
+.screenshot {
+  display: block;
+  width: 100%;
+}
+
+/* Печать при ctrl+p */
+@media print {
+  body {
+    background: white;
+  }
+
+  .sheet {
+    margin: 0;
+    break-after: page;
+  }
+}
